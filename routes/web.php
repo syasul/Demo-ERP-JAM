@@ -29,7 +29,7 @@ Route::get('/verify/{type}/{number}/{sig}', [QrScanController::class, 'verify'])
     ->middleware('throttle:30,1')
     ->name('verify');
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');

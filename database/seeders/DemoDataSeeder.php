@@ -51,6 +51,7 @@ class DemoDataSeeder extends Seeder
                     'name' => $data['name'],
                     'username' => $data['username'],
                     'password' => Hash::make('password'),
+                    'email_verified_at' => now(),
                     'is_active' => true,
                     'phone' => '081234567890',
                 ]
@@ -67,6 +68,7 @@ class DemoDataSeeder extends Seeder
                     'name' => "Sales Rep {$i}",
                     'username' => "sales{$i}",
                     'password' => Hash::make('password'),
+                    'email_verified_at' => now(),
                     'is_active' => true,
                     'phone' => "08129876543{$i}",
                 ]
