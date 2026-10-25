@@ -1,0 +1,12 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app/
+
+    level: 6
+
+    ignoreErrors:
+        - '#Trait App\\Traits\\BelongsToSales is used zero times and is not analysed#'
+        - '#uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory but does not specify its types#'
